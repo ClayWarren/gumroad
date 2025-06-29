@@ -7,22 +7,26 @@
   <% show_nav = !@hide_layouts && user_signed_in? %>
   <% bclass.push("sidebar-nav") if show_nav %>
   <% custom_context = RenderingExtension.custom_context(self) %>
-  <body id="<%= @body_id %>" class="<%= bclass.join(" ") %>" style="<%= params[:as_embed] && "background: transparent" %>">
-    <div id="design-settings" data-settings="<%= custom_context[:design_settings].to_json %>" style="display: none;"></div>
-    <div id="user-agent-info" data-settings="<%= custom_context[:user_agent_info].to_json %>" style="display: none;"></div>
-    <%= render("layouts/shared/flash") %>
-    <% if show_nav %>
-      <%= react_component "Nav", props: { title: @title }, prerender: true %>
+  <body id="<%= @body_id %>" class="<%= bclass.join(" ") %> <%= params[:as_embed] && "overflow-hidden" %>" style="<%= params[:as_embed] && "background: transparent" %>">
+    <%= react_component "MainLayout", prerender: true do %>
+      <div id="design-settings" data-settings="<%= custom_context[:design_settings].to_json %>" style="display: none;"></div>
+      <div id="user-agent-info" data-settings="<%= custom_context[:user_agent_info].to_json %>" style="display: none;"></div>
+      <%= render("layouts/shared/flash") %>
+      <% if show_nav %>
+        <%= react_component "Nav", props: { title: @title }, prerender: true %>
+      <% end %>
+      <main class="overflow-auto col-span-1 row-span-1 print:overflow-initial">
+        <%= content_for?(:content) ? yield(:content) : yield %>
+      </main>
+      <% if content_for? :footer %>
+        <footer class="p-4 text-center">
+          <%= yield :footer %>
+        </footer>
+      <% end %>
+      <%= javascript_include_tag "application" %>
+      <%= load_pack("base") unless @hide_layouts %>
+      <%= yield :script %>
+      <%= render("layouts/shared/helper_widget") %>
     <% end %>
-    <%= content_for?(:content) ? yield(:content) : yield %>
-    <% if content_for? :footer %>
-      <footer>
-        <%= yield :footer %>
-      </footer>
-    <% end %>
-    <%= javascript_include_tag "application" %>
-    <%= load_pack("base") unless @hide_layouts %>
-    <%= yield :script %>
-    <%= render("layouts/shared/helper_widget") %>
   </body>
 </html>

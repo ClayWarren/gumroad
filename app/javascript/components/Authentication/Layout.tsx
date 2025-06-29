@@ -3,12 +3,13 @@ import * as React from "react";
 import { useDomains } from "$app/components/DomainSettings";
 
 import background from "$assets/images/auth/background.png";
+import OnboardingPage from "$app/components/OnboardingPage";
 
 export const Layout = ({ children, header }: { children: React.ReactNode; header: React.ReactNode }) => {
   const { rootDomain, scheme } = useDomains();
 
   return (
-    <>
+    <OnboardingPage>
       <main className="squished">
         <header>
           <a href={`${scheme}://${rootDomain}`} className="logo-full" aria-label="Gumroad" />
@@ -19,6 +20,6 @@ export const Layout = ({ children, header }: { children: React.ReactNode; header
       <aside>
         <img src={background} />
       </aside>
-    </>
+    </OnboardingPage>
   );
 };
