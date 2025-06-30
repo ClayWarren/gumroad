@@ -12,7 +12,7 @@ import { asyncVoid } from "$app/utils/promise";
 import { assertResponseError } from "$app/utils/request";
 import { register } from "$app/utils/serverComponentUtil";
 
-import { Layout } from "$app/components/Discover/Layout";
+import Layout from "$app/components/Discover/Layout";
 import { RecommendedWishlists } from "$app/components/Discover/RecommendedWishlists";
 import { Footer } from "$app/components/Home/Footer";
 import { Icon } from "$app/components/Icons";

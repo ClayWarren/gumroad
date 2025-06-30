@@ -1,7 +1,11 @@
 import React from 'react';
 
+import { CreatorProfile } from "$app/parsers/profile";
+
 interface ProfileLayoutProps {
   children: React.ReactNode;
+  creatorProfile: CreatorProfile;
+  hideFollowForm?: boolean;
 }
 
 const ProfileLayout: React.FC<ProfileLayoutProps> = ({ children }) => {

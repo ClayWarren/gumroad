@@ -6,7 +6,7 @@ interface DiscoverLayoutProps {
 
 const DiscoverLayout: React.FC<DiscoverLayoutProps> = ({ children }) => {
   return (
-    <div className="discover">
+    <div className="container mx-auto px-4">
       {children}
     </div>
   );

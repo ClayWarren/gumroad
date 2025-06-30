@@ -3,7 +3,7 @@ import { createCast } from "ts-safe-cast";
 
 import { register } from "$app/utils/serverComponentUtil";
 
-import { Layout as ProfileLayout } from "$app/components/Profile/Layout";
+import ProfileLayout from "$app/components/Profile/Layout";
 import { Wishlist, WishlistProps } from "$app/components/Wishlist";
 
 type Props = WishlistProps & {

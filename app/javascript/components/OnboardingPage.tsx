@@ -6,7 +6,7 @@ interface OnboardingPageProps {
 
 const OnboardingPage: React.FC<OnboardingPageProps> = ({ children }) => {
   return (
-    <div className="onboarding-page">
+    <div className="flex flex-col items-center justify-center min-h-screen">
       {children}
     </div>
   );

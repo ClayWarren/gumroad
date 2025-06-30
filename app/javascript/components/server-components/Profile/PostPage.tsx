@@ -10,7 +10,7 @@ import { register } from "$app/utils/serverComponentUtil";
 
 import { LoadingSpinner } from "$app/components/LoadingSpinner";
 import { CommentsMetadataProvider, PostCommentsSection } from "$app/components/Post/PostCommentsSection";
-import { Layout } from "$app/components/Profile/Layout";
+import Layout from "$app/components/Profile/Layout";
 import { useRichTextEditor } from "$app/components/RichTextEditor";
 import { useUserAgentInfo } from "$app/components/UserAgent";
 import { useRunOnce } from "$app/components/useRunOnce";

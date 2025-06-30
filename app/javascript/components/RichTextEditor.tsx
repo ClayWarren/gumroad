@@ -1,6 +1,7 @@
 import { Editor, Content, createDocument, isList } from "@tiptap/core";
 import Placeholder from "@tiptap/extension-placeholder";
 import Underline from "@tiptap/extension-underline";
+import { IconName } from "$app/types/icons";
 import { redoDepth, undoDepth } from "@tiptap/pm/history";
 import { DOMSerializer } from "@tiptap/pm/model";
 import { EditorState, Selection } from "@tiptap/pm/state";

@@ -1,6 +1,7 @@
 import cx from "classnames";
 import * as React from "react";
 import { cast } from "ts-safe-cast";
+import { IconName } from "$app/types/icons";
 
 import { escapeRegExp } from "$app/utils";
 import { asyncVoid } from "$app/utils/promise";

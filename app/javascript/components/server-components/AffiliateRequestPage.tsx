@@ -10,7 +10,7 @@ import { register } from "$app/utils/serverComponentUtil";
 import { Button } from "$app/components/Button";
 import { useAppDomain } from "$app/components/DomainSettings";
 import { useLoggedInUser } from "$app/components/LoggedInUser";
-import { Layout } from "$app/components/Profile/Layout";
+import Layout from "$app/components/Profile/Layout";
 import { showAlert } from "$app/components/server-components/Alert";
 
 type FormStatus =

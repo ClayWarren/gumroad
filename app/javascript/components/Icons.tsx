@@ -1,6 +1,8 @@
 import cx from "classnames";
 import * as React from "react";
 
+type IconName = string;
+
 type IconProps = {
   name: IconName;
 } & React.JSX.IntrinsicElements["span"];

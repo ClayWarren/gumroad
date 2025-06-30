@@ -5,7 +5,7 @@ import { CreatorProfile } from "$app/parsers/profile";
 import { register } from "$app/utils/serverComponentUtil";
 
 import { FollowFormBlock } from "$app/components/Profile/FollowForm";
-import { Layout } from "$app/components/Profile/Layout";
+import Layout from "$app/components/Profile/Layout";
 
 type Props = { creator_profile: CreatorProfile };
 

@@ -13,7 +13,8 @@
   }
 
   &::after {
-    @extend %icon, .icon-arrow-diagonal-up-right;
+    @extend %icon;
+    @extend .icon-arrow-diagonal-up-right;
     font-size: $big-icon-size;
     grid-column: -1;
   }

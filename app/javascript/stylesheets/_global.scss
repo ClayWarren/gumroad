@@ -129,7 +129,6 @@ details {
     }
 
     &::before {
-      @extend %icon, .icon-outline-cheveron-right;
       margin-right: spacer(1);
     }
   }
@@ -137,9 +136,7 @@ details {
     // details elements do not support display: grid in all browsers
     margin-bottom: spacer(2);
 
-    &::before {
-      @extend .icon-outline-cheveron-down;
-    }
+    
   }
 
   &.toggle {
@@ -156,19 +153,9 @@ details {
   }
 }
 
-.user-avatar {
-  border-radius: border-radius(3);
-  width: $big-icon-size;
-  aspect-ratio: 1;
-  flex-shrink: 0;
-  border: $border;
-}
 
-.application-icon {
-  border: $border;
-  border-radius: border-radius(1);
-  flex-shrink: 0;
-}
+
+
 
 [role^="menuitem"] {
   cursor: pointer;
@@ -192,15 +179,7 @@ details {
       margin-right: spacer(2);
     }
 
-    &:hover {
-      background-color: var(--active-bg);
-    }
-
-    @each $name in $states {
-      &.#{$name} {
-        color: full-color($name);
-      }
-    }
+    
   }
 
   [role="menuitemradio"],

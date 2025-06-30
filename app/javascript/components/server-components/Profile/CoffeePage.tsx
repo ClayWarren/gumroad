@@ -7,7 +7,7 @@ import { register } from "$app/utils/serverComponentUtil";
 import { Product, Props as ProductProps, Purchase } from "$app/components/Product";
 import { ConfigurationSelector, PriceSelection } from "$app/components/Product/ConfigurationSelector";
 import { CtaButton, getCtaName } from "$app/components/Product/CtaButton";
-import { Layout as ProfileLayout } from "$app/components/Profile/Layout";
+import ProfileLayout from "$app/components/Profile/Layout";
 import { showAlert } from "$app/components/server-components/Alert";
 import { useOriginalLocation } from "$app/components/useOriginalLocation";
 import { useRunOnce } from "$app/components/useRunOnce";

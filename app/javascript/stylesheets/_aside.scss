@@ -31,7 +31,8 @@ aside {
   .close {
     margin-left: auto;
     &::after {
-      @extend %icon, .icon-x;
+      @extend %icon;
+      @extend .icon-x;
     }
   }
 }
